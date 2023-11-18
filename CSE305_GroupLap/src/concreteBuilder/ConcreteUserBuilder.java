@@ -44,4 +44,10 @@ public class ConcreteUserBuilder extends UserBuilder {
         return new User(userID, password, userName, mail, phoneNumber, type);
     }
 
+    @Override
+    public UserBuilder setUserID(String userID) {
+        this.userID = userID;
+        return this;
+    }
+    
 }

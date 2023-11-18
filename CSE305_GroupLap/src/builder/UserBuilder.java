@@ -14,7 +14,8 @@ public abstract class UserBuilder {
         this.userID = userID;
         this.type = type;
     }
-
+    public abstract UserBuilder setUserID(String userID);
+    
     public abstract UserBuilder setUserName(String username);
 
      public abstract UserBuilder setPassword(String password);
