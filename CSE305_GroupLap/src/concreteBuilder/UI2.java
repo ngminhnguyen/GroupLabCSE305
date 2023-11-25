@@ -50,7 +50,7 @@ public class UI2 extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Bus Service", "Time", "Money"
+                "Bus Service", "Situation", "Money"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
