@@ -4,17 +4,25 @@
  */
 package concreteBuilder;
 
-/**
- *
- * @author admin
- */
+import javax.swing.DefaultListModel;
+import product.NodeList;
+
+
 public class UI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form UI
-     */
     public UI() {
         initComponents();
+        NodeList nodeList =new NodeList();
+        DefaultListModel busStationListModel = new DefaultListModel<>();
+        busStationListModel.addElement("Item 1");
+        
+        var list = nodeList.getNodeList();
+ 
+        for (int i =0;i<list.size();i++) {
+            busStationListModel.addElement(list.get(i));
+        }
+
+        busStationList.setModel(busStationListModel);
     }
 
     /**
@@ -30,7 +38,7 @@ public class UI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        busStationList = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
 
         jRadioButtonMenuItem1.setSelected(true);
@@ -44,14 +52,19 @@ public class UI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Bus Interchange");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        busStationList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(busStationList);
 
         jButton1.setText("Select");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,7 +84,7 @@ public class UI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addComponent(jButton1)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,6 +101,11 @@ public class UI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String a = busStationList.getSelectedValue();
+        System.out.println(a);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,10 +143,10 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JList<String> busStationList;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
