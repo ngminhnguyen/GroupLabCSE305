@@ -4,11 +4,12 @@
  */
 package product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NodeList {
 
-    public List<Node> nodeList;
+    public List<Node> nodeList = new ArrayList<>();
 
     public NodeList() {
         Node n1 = new Node("Hà Nội");
@@ -43,6 +44,35 @@ public class NodeList {
         Node n30 = new Node("Rach Gia");
 
         this.nodeList.add(n1);
+        this.nodeList.add(n2);
+        this.nodeList.add(n3);
+        this.nodeList.add(n4);
+        this.nodeList.add(n5);
+        this.nodeList.add(n6);
+        this.nodeList.add(n7);
+        this.nodeList.add(n8);
+        this.nodeList.add(n9);
+        this.nodeList.add(n10);
+        this.nodeList.add(n11);
+        this.nodeList.add(n12);
+        this.nodeList.add(n13);
+        this.nodeList.add(n14);
+        this.nodeList.add(n15);
+        this.nodeList.add(n16);
+        this.nodeList.add(n17);
+        this.nodeList.add(n18);
+        this.nodeList.add(n19);
+        this.nodeList.add(n20);
+        this.nodeList.add(n21);
+        this.nodeList.add(n22);
+        this.nodeList.add(n23);
+        this.nodeList.add(n24);
+        this.nodeList.add(n25);
+        this.nodeList.add(n26);
+        this.nodeList.add(n27);
+        this.nodeList.add(n28);
+        this.nodeList.add(n29);
+        this.nodeList.add(n30);
 
     }
 

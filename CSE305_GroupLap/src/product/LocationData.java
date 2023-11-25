@@ -47,7 +47,7 @@ public class LocationData {
         Node n29 = new Node("Buôn Ma Thuột");
         Node n30 = new Node("Rach Gia");
 
-        nodeList.addNode(n1);
+       
         
        
         
